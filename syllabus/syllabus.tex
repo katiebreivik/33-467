@@ -1,0 +1,259 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Course Outline}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+\input{includes/teacher-info}                              %|
+\input{includes/course-info}                               %|   
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{includes/packages-imports}                          %|  
+\input{includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Insert the course & teacher info                         |
+%------>------>------>------>------>------>------>------>--> |
+\hrule     
+\vspace{.5cm}
+\begin{multicols}{1}
+    \begin{description}[labelindent=0.01in,leftmargin=1.4in,style=nextline]
+        %--> First column:         
+		\item[\textsc{Instructor}:] \instructor
+        \item[\textsc{E-mail}:] \email
+        \item[]  
+        %--> Second column:         
+        \item[\textsc{Office}:]  \office
+        \item[\textsc{Office Hours}:] \hours
+        \item[] 
+    \end{description}
+\end{multicols}
+\hrule        
+\vspace{.2cm}
+
+ %--------  Course Description  ------------------------------
+\customsection{Course Description from Course Catalog}  
+\noindent The physics of stars is introduced from first principles, leading from
+star formation to nuclear fusion to late stellar evolution and the end points of
+stars: white dwarfs, neutron stars and black holes. The theory of stellar
+structure and evolution is elegant and impressively powerful, bringing together
+all branches of physics to predict the life cycles of the stars. The basic
+physical processes in the interstellar medium will also be described, and the
+role of multi-wavelength astronomy will be used to illustrate our understanding
+of the structure of the Milky Way Galaxy, from the massive black hole at the
+center to the halo of dark matter which emcompasses it.
+
+\customsection{Student Learning Outcomes} 
+\noindent At the end of the class, the students should:
+\begin{borderedsquare}
+     \setlength\itemsep{0.3em}        
+	\item be able to work independently to formulate ways to attack a problem in
+	astrophysics, find relevant data, make a compelling argument and reach a
+	conclusion.
+	\item be able to present research done orally and in a paper format to the
+standard expected for conference presentations in astrophysics.
+    \item be able to compute stellar properties from observations.
+    \item be able to show how the laws of force equilibrium, and mass and energy
+conservation lead to the equations of stellar structure.
+    \item be able to solve the equations of stellar structure for particular
+cases and for particular boundary conditions.
+    \item be able to relate the present state of a star to its state at any time
+in the future.
+    \item understand how stars form and be able to demonstrate how the
+interstellar medium interacts with the initial and end states of stars. 
+    \item be conversant with the current state of research in extrasolar planets
+and understand how our solar system is different to and similar to other
+detected solar systems.
+    \item understand the structure of the Milky Way galaxy, and able to relate
+the dark matter distribution to that of stars, gas, dust and black holes.
+\end{borderedsquare}
+
+\customsection{Textbooks and Course Materials}  
+%---------------------------------
+%--> List of recommended textbooks. 
+\begin{itemize}[itemsep=4pt,parsep=0pt,topsep=1pt,partopsep=1pt]
+	\item[\color{darkblue}\faNewspaperO]\textbf{Canvas:} The site can be reached
+	from \href{http://www.cmu.edu/canvas/}{http://www.cmu.edu/canvas/} The
+	course website will contain the syllabus, homework, project assignments and
+	all required reading. Announcements and visual material presented during
+	lectures will also be posted throughout the semester.\\
+
+	\item[\color{darkblue}\faBook] \textbf{\textsc{Textbooks:}} There is no
+	required textbook for this course. All required reading will be available
+	through Canvas. The majority of the stellar structure and evolution material
+	will be drawn from Onno Pols'
+	\href{https://www.astro.ru.nl/~onnop/education/stev_utrecht_notes/}{lecture
+	notes}. 
+\end{itemize}
+
+\customsection{Expected Prerequisite Knowledge}
+\noindent FILL IN HERE -- include Prerequisites and their prerequisites
+
+
+\customsection{Evaluation Procedures}    
+\label{sec:eval-procudures}
+\noindent The course will consist of in-class lectures and homeworks based on
+the lecture material as well as two long-term projects. There will be no
+mid-term or final exams. Instead, each project will be evaluated based on two
+in-class presentations. 
+
+\textbf{Homework:} Homework will be given approximately weekly. The homework
+will be shorter than for most courses because you will be spending time every
+week on projects. Science is a collaborative endeavour. To this end, you are
+encouraged to work with your colleagues on homework and can obtain a maximum of
+5 pts extra per homework by citing those who you worked with. 
+
+\textbf{Projects: } Two long-term projects will be carried out during the
+semester. Each will count for on third of the course grade. The projects will be
+chosen from a list, and will be graded based on an update presentation roughly
+halfway through (after $\sim 1$ month), a final presentation, and a short paper
+writeup. The project grading rules are given at the end of this syllabus. There
+will be time at the halfway point of each class (``Project Workshop'') to ask
+the instructor questions about projects, brainstorm with fellow students, or
+carry out research.\\ 
+
+
+    \begin{itemize}[itemsep=8pt,parsep=0pt,topsep=3pt,partopsep=4pt]
+    \item[]
+%    \begin{center}
+        \renewcommand{\arraystretch}{1.5} % this reduces the vertical spacing
+        %between rows    
+        \begin{tabular}{lcl}
+            \thead{\color{darkblue} Course Component} & \thead{\color{darkblue}
+            Overall Weight} & \thead{\color{darkblue}Tentative Period} \\ 
+            %---s Load the table body: dynamic table content.        
+       \hline    
+            \textbf{Individual Homework} &   &   \\                         
+                   \hline    
+		\textit{Assignment}  &  20\% &  Week 2-7 \\                                                     
+          \hline    
+        \textbf{Projects} &   &   \\                         
+           \hline
+            \textit{Project 1: mid presentation} &  5\% &  Week 7 \\               
+            \textit{Project 1: final presentation} &  35\% &  Week 8 \\               
+            \hline
+			\textit{Project 2: mid presentation} &  5\% &  Week 7 \\               
+            \textit{Project 2: final presentation} &  35\% &  Week 8 \\               
+            \hline              
+        \hline
+
+
+        \end{tabular}
+%    \end{center} 
+    %        \evaluationrules
+\end{itemize}    
+
+\clearpage
+
+%--------  Required Software and Material ------------------------------
+\vspace{.4cm}
+
+\customsection{Recommended Software and Tools}  
+\noindent All of the projects will have a computational component. While there
+is not a perferred operating system for any of the projects, it is strongly
+recommended that students use a version control system like \texttt{git},
+commonly interfaced with web-based services like
+\href{https://github.com}{Github}, \href{https://about.gitlab.com}{Gitlab} or
+\href{https://bitbucket.org}{Bitbucket}. This is especially the case for
+students working as a team on a project to facilitate sharing of code and data. 
+
+  
+\clearpage
+
+\customsection{Tentative Course Content}
+%TODO: split implementation into 3 builds.
+\renewcommand{\arraystretch}{1.5} % this reduces the vertical spacing between    
+\noindent\begin{tabular}{|p{1cm}|p{15cm}|}
+	\hline
+	\thead{\color{darkblue} Week} & \thead{\color{darkblue}Topics \& Homework}
+	\\ 
+	\hline
+	%---s Load the table body: dynamic table content.        
+	\textbf{1} &  Chapter 1: Observational techniques  \\
+	& \assignments \#0  \\
+	\hline    
+%	 Week 1
+	\textbf{2} &  Chapter 2: \\
+		& \assignments -- \\
+	& \redtext{\textbf{Announcement:} Project \#1 Selection: 09/05}\\
+\hline    
+%	 Week 3
+	\textbf{4} &  Topics... \\
+	& \assignments { }\redtext{Team project proposal due.}\\ 
+\hline
+%	 Week 4 
+	\textbf{4} & Topics... \\
+    & \assignments { }\redtext{Game Design Document due.}\\
+\hline
+%	 Week 5 
+\textbf{5} & Topics... \\
+& \assignments { } \redtext{Team project proposal presentations.}\\
+\hline
+%	 Week 6 
+\textbf{6} & Topics...\\
+\hline
+%	 Week 7 
+\textbf{7} & Review for exam. \redtext{Assignment due.} \\
+\hline
+%	 Week 8 
+\textbf{8} & \textbf{Exam} \& work on team project. \\
+
+\hline
+%	 Week 9
+\textbf{9} & Topics...\\
+	\hline
+%	 Week 10
+\textbf{10} & Topics...\\
+& \redtext{Build \#1 due.}\\
+  \hline
+%	 Week 11
+\textbf{11} & Topics...\\
+& \redtext{TCR Checklist due.} \\
+ \hline
+ %	 Week 12
+\textbf{12} & Topics...\\
+& \redtext{Build \#2 due.}\\
+ \hline
+ %	 Week 13
+
+ \textbf{13} & Work on team project.\\
+\hline 
+ %	 Week 14
+\textbf{14} &  Playtesting session. \\
+& \redtext{Build \#3 due.}\\
+\hline  
+ %	 Week 15
+\textbf{15} & Final project demonstrations. Peer review due. \\
+& \redtext{QA testing report \& user guide due.}\\
+\hline  
+\end{tabular}   
+
+\vspace{1cm}
+\noindent \textcolor{red}{\textbf{\underline{NOTE:}}} The above actual dates may
+be modified due to the requirements of the class. Also, the indicated dates may
+be moved backward or forward depending on class progress. \textbf{Exact dates
+and instructions will be announced on course webpage}. 
+\pageref{LastPage}
+\end{document} 
