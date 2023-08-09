@@ -14,7 +14,7 @@
 \definecolor{tcol_CNV1}{HTML}{8E44AD} % First color for Conventions
 \definecolor{tcol_CNV2}{HTML}{A10B49} % First color for Conventions
 
-\begin{tcolorbox}[enhanced, title=Contents,
+\begin{tcolorbox}[enhanced,
     fonttitle=\fontsize{20}{24}\sffamily\bfseries\selectfont, coltitle=black,
     fontupper=\sffamily, interior style={left color=tcol_CNT1!80,right
     color=tcol_CNT2!80}, frame style={left color=tcol_CNT1!60!black,right
@@ -34,17 +34,24 @@
 \section{What is the deal with projects?}
 
 The vast majority of the work for this course will be done through two projects.
-The first set of projects is listed in the document and is designed to cover
-material that is complementary to the lectures/readings up to the Fall break.
-The second list of projects will be relevant for material from Fall break to the
-end of the semester.
+The first set of projects is listed below and is designed to cover material that
+is complementary to the lectures/readings up to the Fall break. The second list
+of projects will be relevant for material from after Fall break to the end of
+the semester.
 
 The goal of these projects is for students to engage with the \emph{process of
-astronomical research.} The first set of projects are more defined in order to
-ease into the research process, while the second set of projects are more open
-ended to allow for more exploration. Each of the projects will have a
-computational component -- this is a central facet of astronomical research.
-Even a pen and paper study must show \emph{some} figures!
+solving astronomical problems.} Each project has questions that must be
+answered, but these are not the only questions that \emph{should} be answered.
+As the project progresses, you should encounter opportunities to dig deeper into
+some aspects of the work that you find most interesting. These side quests often
+lead to the most exciting findings, so you are encouraged to follow them.
+Throughout the semester, you are also encouraged to chat with me and your
+colleagues about your side quests: this will be facilitated both through parts
+of your homework as well as parts of your mid and final presentations.
+
+Each of the projects will have a computational component -- this is a central
+facet of astronomical research. Even a pen and paper study must show \emph{some}
+figures to illustrate your arguments!
 
 \subsection{Project evaluation}
 The largest portion of the project grade will be determined by two in-class
@@ -53,33 +60,139 @@ will be small project assessments included in each homework assignment to ensure
 that progress is being made week by week. 
 
 \section{Project List 1}
-\subsection{Simulating the Sun}
-
-\subsection{The D6 Type Ia supernova scenario}
-
-
 \subsection{The Fate of the Earth, and other Exoplanets}
+This project will use MESA to simulate the evolution of a Sun-analog star with a
+mass of $1\,M_{\odot}$ and metallicity of $Z=0.02$. MESA is the most widely used
+open source stellar evolution code. You should first start by following the
+\href{https://docs.mesastar.org/en/release-r23.05.1/quickstart.html#installation}{installation
+instructions for MESA}. As with all open source codes, it is a good idea to read
+all the documentation provided in the `Quickstart' if there is one. Once you've
+acquainted yourself with the documentation, start working to build your Sun
+analog by following along with the
+\href{https://docs.mesastar.org/en/release-r23.05.1/test_suite/1M_pre_ms_to_wd.html#m-pre-ms-to-wd}{test
+case for a $1\,M_{\odot}$ star}. What are the conditions for habitability? At
+different phases of the Sun's evolution, how do these conditions change? 
+
+Once you have a working stellar evolution model, make a change to the stellar
+properties in the way you find most interesting. You'll need to justify the
+change you make, so choose carefully! $:-)$ Where would the habitability zone be
+for your new stellar model? And how does the star's evolution affect that
+habitability? Compare your stars to the hosts of known exoplanets. Why are they
+different? Are the differences due to physical reasons or due to our search
+strategies for exoplanets? What search strategies are best for finding
+`habitable planets'?
 
 
-\subsection{Massive Star Evolution}
+
+\subsection{Testing Stellar Models with Wide Binaries}
+Gaia is a telescope launched by the European Space Agency which is measuring the
+positions and velocities of every star in the Milky Way that is brighter than
+$G=20$ by observing the entire sky many times over its 10-year observation
+duration. This survey design creates a myriad of \emph{extremely rich} datasets
+because the time-resolved data allows for 6-dimensional (3 dimensions in
+position and 3 dimensions in velocity) measurements!
+
+One early study used Gaia data to construct a catalog of roughly a million wide
+binary stars. Multiple projects can be done with this dataset! Any project that
+is done in this category should begin with a thorough reading of the associated
+\href{https://ui.adsabs.harvard.edu/abs/2021MNRAS.506.2269E/abstract}{paper} by
+El-Badry et al. 2022 which links to the data and details how the population was
+selected. Each person/team should reselect the data then perform an analysis
+chosen from the list below. You should be able to summarize the selection
+process and describe why this selection ensures that the binary systems are wide
+enough that they are unlikely to have interacted. 
+
+\subsubsection{Initial to Final Mass Relation for WDs}
+ 
+
+\subsubsection{Testing Isochrone models}
 
 
-\subsection{An Empirical Initial to Final Mass Relation}
+\subsection{Studying the Local Stellar Population}
 
 
-\subsection{Studying stars in detail with binaries}
-\href{https://zenodo.org/record/4435257}{https://zenodo.org/record/4435257}
-\href{https://ui.adsabs.harvard.edu/abs/2021MNRAS.506.2269E/abstract}{Paper}
+\subsection{Using Stellar Isochrones to Measure the Age of a Star Cluster}
 
-\subsection{Calculating the space density of WDs in the Galaxy}
+
+\subsection{Designing Surveys for the Stars}
+
+
+\subsection{The Stellar-Origin Black Hole Mass Function}
+Black holes with masses below $\sim100\,M_{\odot}$ are predominantly expected to
+form from stars. This project will investigate how different assumptions for
+stellar evolution affects the masses of the black holes that can be produced
+from stars by using the population synthesis code
+\href{https://cosmic-popsynth.github.io/}{COSMIC} to simulate single stars with
+different ZAMS masses and metallicities. COSMIC includes several models for
+compact object formation but actually doesn't treat black holes different from
+neutron stars; your first task to study how COSMIC simulations compact object
+formation and articulate why black holes and neutron stars are handled the same
+way. 
+
+Next, you should investigate the boundaries (upper and lower) of the black hole
+mass spectrum and how those boundaries change with different assumptions in the
+code. How does the mass spectrum within the boundaries change? Compare your
+simulations to black holes discovered and characterized through microlensing,
+radial velocity and astrometry, X-rays, and gravitational waves. What can you
+conclude about the origin of black holes based on this comparison? As detectors
+increase their sensitivity to stellar populations that are far away, do you
+expect the majority of the black holes to have larger masses or smaller masses?
 
 \section{Project List 2}
+\subsection{Orbital Evolution of Binaries in Roche-lobe Overflow}
+This project has both analytic and computational components. 
+
 \subsection{Finding black holes with Gaia}
 \href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.1057E/abstract}{Gaia BH1 paper}
 
-\subsection{The wild world of binary evolution}
-\href{https://cosmic-popsynth.github.io/}{https://cosmic-popsynth.github.io/}
 
+
+\subsection{The Wild World of Binary-Star Evolution}
+These projects will use the population synthesis code
+\href{https://cosmic-popsynth.github.io/}{COSMIC} which simulates single and
+binary-star populations at phases across the H-R Diagram through to the
+formation of stellar remnants. There are \emph{many} different uncertainties
+associated with binary evolution due to different interactions between binary
+components that can occur based on the initial properties of the system and
+assumptions made for how each interaction should be treated. This means that
+there are \emph{a lot} of opportunities for exploration. You should explore the
+COSMIC documentation and \href{}{COSMIC code paper} for a summary of the
+different assumptions made in the code as well as the
+\href{https://www.astro.ru.nl/~sluys/Binaries/files/BinaryEvolutionNutshell_letter.pdf}{Binary
+Evolution in a Nutshell} notes to find an aspect of binary star interactions
+that you find most interesting. Maybe it's studying how different assumptions
+for wind mass loss affects binary populations? Maybe it's investigating how
+compact object populations depend on the strength of supernova natal kicks?
+Maybe it's something else!
+
+Whatever topic you choose should not be exactly the same as any other projects,
+so you may need to coordinate with your colleagues. Once you have a topic to
+study, you should determine which assumptions are set by flags in COSMIC that
+affect that topic as well as determine which binary populations will show the
+largest changes by using different assumptions. You should then summarize how
+you expect each assumption you make to alter the binary population from its
+initial configuration at ZAMS. Finally, you should evolve large populations of
+binaries with COSMIC using the flags you've chosen and make figures which
+illustrate how each assumption impacts the population. 
+
+
+\subsection{Investigating Dark Matter with Stellar Streams}
+
+
+\subsection{The Fastest Stars in the Galaxy}
+
+
+\subsection{Connecting Dust Morphology to Star Formation}
+
+
+\subsection{Kinematics of Compact Objects in the Galaxy}
+
+
+\subsection{Chemical Evolution with the Cannon}
+
+
+
+\subsection{Exoplanet Orbital Dynamics with Rebound}
 
 
 \end{document}

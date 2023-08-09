@@ -7,6 +7,11 @@
 %
 \setlength{\unitlength}{1in}
 \renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
 
 %------------------------------------------------------------
 % Import commands for both teacher and course information.  | NOTE: Change your
@@ -28,6 +33,8 @@
 \topmargin -70pt
 \begin{document} 
 
+\normalfont
+
 %-------------------------------------------------------------
 %-- Make the header of the document                          |
 %------>------>------>------>------>------>------>------>--> |
@@ -38,12 +45,13 @@
 %------>------>------>------>------>------>------>------>--> |
 \hrule     
 \vspace{.5cm}
-\begin{multicols}{1}
-    \begin{description}[labelindent=0.01in,leftmargin=1.4in,style=nextline]
+
+\begin{multicols}{2}
+    \begin{description}[labelindent=0.00in,leftmargin=1.25in,rightmargin=0.0in,style=nextline]
         %--> First column:         
 		\item[\textsc{Instructor}:] \instructor
         \item[\textsc{E-mail}:] \email
-        \item[]  
+        \item[] 
         %--> Second column:         
         \item[\textsc{Office}:]  \office
         \item[\textsc{Office Hours}:] \hours
@@ -66,21 +74,19 @@ of the structure of the Milky Way Galaxy, from the massive black hole at the
 center to the halo of dark matter which emcompasses it.
 
 \customsection{Student Learning Outcomes} 
-\noindent At the end of the class, the students should:
+\noindent At the end of the class, the students should be able to:
 \begin{borderedsquare}
      \setlength\itemsep{0.3em}        
-	\item be able to work independently to formulate ways to attack a problem in
-	astrophysics, find relevant data, make a compelling argument and reach a
-	conclusion.
-	\item be able to present research done orally and in a paper format to the
-standard expected for conference presentations in astrophysics.
-    \item be able to compute stellar properties from observations.
-    \item be able to show how the laws of force equilibrium, and mass and energy
+	\item formulate a comphrehensive approach to answering open questions in
+	astronomy that includes using physical prinicples and astronomical data to support their arguments.
+	\item present research through oral presentations and text format with
+	supporting figures.
+    \item compute stellar properties from observations.
+    \item show how the laws of force equilibrium, and mass and energy
 conservation lead to the equations of stellar structure.
-    \item be able to solve the equations of stellar structure for particular
-cases and for particular boundary conditions.
-    \item be able to relate the present state of a star to its state at any time
+    \item relate the present state of a star to its state at any time
 in the future.
+    \item describe how a stellar companion can alter the evolution of stellar populations.
     \item understand how stars form and be able to demonstrate how the
 interstellar medium interacts with the initial and end states of stars. 
     \item be conversant with the current state of research in extrasolar planets
@@ -109,7 +115,10 @@ the dark matter distribution to that of stars, gas, dust and black holes.
 \end{itemize}
 
 \customsection{Expected Prerequisite Knowledge}
-\noindent FILL IN HERE -- include Prerequisites and their prerequisites
+\noindent The expected prerequisite knowledge for this course is the material
+covered in `Stars, Galaxies, and the Universe' (33-224) and its prequisites.
+Stellar physics builds on a small amount of material from `Quantum Physics'
+(33-234) but the required material will also be discussed during this course. 
 
 
 \customsection{Evaluation Procedures}    
