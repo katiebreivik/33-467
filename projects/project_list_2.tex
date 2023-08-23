@@ -1,0 +1,88 @@
+\documentclass[10pt]{extarticle}
+
+\usepackage{custom}
+
+\title{Project List 2}
+\author{33-467: Astrophysics of the Stars and Galaxy}
+\date{Fall 2023}
+
+\begin{document}
+\maketitle
+
+\definecolor{tcol_CNT1}{HTML}{EDEADE} % First color for Contents
+\definecolor{tcol_CNT2}{HTML}{EDEADE} % Second color for Contents
+\definecolor{tcol_CNV1}{HTML}{8E44AD} % First color for Conventions
+\definecolor{tcol_CNV2}{HTML}{A10B49} % First color for Conventions
+
+\begin{tcolorbox}[enhanced,
+    fonttitle=\fontsize{20}{24}\sffamily\bfseries\selectfont, coltitle=black,
+    fontupper=\sffamily, interior style={left color=tcol_CNT1!80,right
+    color=tcol_CNT2!80}, frame style={left color=tcol_CNT1!60!black,right
+    color=tcol_CNT2!60!black}, attach boxed title to top center={yshift=10pt},
+    boxed title style={frame hidden, interior style={left color=tcol_CNT1,right
+    color=tcol_CNT2}, frame style={left color=tcol_CNT1!60!black,right
+    color=tcol_CNT2!60!black}, height=24pt,bean arc,drop fuzzy shadow },
+    top=2mm,bottom=2mm,left=2mm,right=2mm, before skip=20mm,after skip=20mm,
+    drop fuzzy shadow,breakable]
+%
+\makeatletter
+\@starttoc{toc}
+\makeatother
+\end{tcolorbox}
+
+\section{Orbital Evolution of Binaries in Roche-lobe Overflow}
+This project has both analytic and computational components. 
+
+\section{Finding black holes with Gaia}
+\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.1057E/abstract}{Gaia BH1 paper}
+
+
+
+\section{The Wild World of Binary-Star Evolution}
+These projects will use the population synthesis code
+\href{https://cosmic-popsynth.github.io/}{COSMIC} which simulates single and
+binary-star populations at phases across the H-R Diagram through to the
+formation of stellar remnants. There are \emph{many} different uncertainties
+associated with binary evolution due to different interactions between binary
+components that can occur based on the initial properties of the system and
+assumptions made for how each interaction should be treated. This means that
+there are \emph{a lot} of opportunities for exploration. You should explore the
+COSMIC documentation and \href{}{COSMIC code paper} for a summary of the
+different assumptions made in the code as well as the
+\href{https://www.astro.ru.nl/~sluys/Binaries/files/BinaryEvolutionNutshell_letter.pdf}{Binary
+Evolution in a Nutshell} notes to find an aspect of binary star interactions
+that you find most interesting. Maybe it's studying how different assumptions
+for wind mass loss affects binary populations? Maybe it's investigating how
+compact object populations depend on the strength of supernova natal kicks?
+Maybe it's something else!
+
+Whatever topic you choose should not be exactly the same as any other projects,
+so you may need to coordinate with your colleagues. Once you have a topic to
+study, you should determine which assumptions are set by flags in COSMIC that
+affect that topic as well as determine which binary populations will show the
+largest changes by using different assumptions. You should then summarize how
+you expect each assumption you make to alter the binary population from its
+initial configuration at ZAMS. Finally, you should evolve large populations of
+binaries with COSMIC using the flags you've chosen and make figures which
+illustrate how each assumption impacts the population. 
+
+
+\section{Investigating Dark Matter with Stellar Streams}
+
+
+\section{The Fastest Stars in the Galaxy}
+
+
+\section{Connecting Dust Morphology to Star Formation}
+
+
+\section{Kinematics of Compact Objects in the Galaxy}
+
+
+\section{Chemical Evolution with the Cannon}
+
+
+
+\section{Exoplanet Orbital Dynamics with Rebound}
+
+\end{document}

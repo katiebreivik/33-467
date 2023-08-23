@@ -1,8 +1,10 @@
 \documentclass[10pt]{extarticle}
 
 \usepackage{custom}
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
 
-\title{Project Lists}
+\title{Project List 1}
 \author{33-467: Astrophysics of the Stars and Galaxy}
 \date{Fall 2023}
 
@@ -31,36 +33,7 @@
 \end{tcolorbox}
 
 
-\section{What is the deal with projects?}
-
-The vast majority of the work for this course will be done through two projects.
-The first set of projects is listed below and is designed to cover material that
-is complementary to the lectures/readings up to the Fall break. The second list
-of projects will be relevant for material from after Fall break to the end of
-the semester.
-
-The goal of these projects is for students to engage with the \emph{process of
-solving astronomical problems.} Each project has questions that must be
-answered, but these are not the only questions that \emph{should} be answered.
-As the project progresses, you should encounter opportunities to dig deeper into
-some aspects of the work that you find most interesting. These side quests often
-lead to the most exciting findings, so you are encouraged to follow them.
-Throughout the semester, you are also encouraged to chat with me and your
-colleagues about your side quests: this will be facilitated both through parts
-of your homework as well as parts of your mid and final presentations.
-
-Each of the projects will have a computational component -- this is a central
-facet of astronomical research. Even a pen and paper study must show \emph{some}
-figures to illustrate your arguments!
-
-\subsection{Project evaluation}
-The largest portion of the project grade will be determined by two in-class
-presentations, with the most weight on the final presentation. However, there
-will be small project assessments included in each homework assignment to ensure
-that progress is being made week by week. 
-
-\section{Project List 1}
-\subsection{The Fate of the Earth, and other Exoplanets}
+\section{The Fate of the Earth, and other Exoplanets}
 This project will use MESA to simulate the evolution of a Sun-analog star with a
 mass of $1\,M_{\odot}$ and metallicity of $Z=0.02$. MESA is the most widely used
 open source stellar evolution code. You should first start by following the
@@ -84,7 +57,7 @@ strategies for exoplanets? What search strategies are best for finding
 
 
 
-\subsection{Testing Stellar Models with Wide Binaries}
+\section{Testing Stellar Models with Wide Binaries}
 Gaia is a telescope launched by the European Space Agency which is measuring the
 positions and velocities of every star in the Milky Way that is brighter than
 $G=20$ by observing the entire sky many times over its 10-year observation
@@ -93,31 +66,146 @@ because the time-resolved data allows for 6-dimensional (3 dimensions in
 position and 3 dimensions in velocity) measurements!
 
 One early study used Gaia data to construct a catalog of roughly a million wide
-binary stars. Multiple projects can be done with this dataset! Any project that
-is done in this category should begin with a thorough reading of the associated
+binary stars. Multiple projects can be done with this dataset! Since multiple
+projects will be taken from the same dataset, students who pick the projects
+below will be able to work together on aspects of the projects that are shared.
+Any project that is done in this category should begin with a thorough reading
+of the associated
 \href{https://ui.adsabs.harvard.edu/abs/2021MNRAS.506.2269E/abstract}{paper} by
 El-Badry et al. 2022 which links to the data and details how the population was
 selected. Each person/team should reselect the data then perform an analysis
 chosen from the list below. You should be able to summarize the selection
 process and describe why this selection ensures that the binary systems are wide
-enough that they are unlikely to have interacted. 
+enough that they are unlikely to have interacted. This project has tool overlap
+with the `Measuring Star Cluster Ages' project so you should plan to share
+knowledge and expertise with your colleagues working on that project. 
 
-\subsubsection{Initial to Final Mass Relation for WDs}
+\subsection{Calibrating the Initial to Final Mass Relation for White Dwarfs}
+ The initial to final mass relation is a way to connect stars at ZAMS to the WDs
+ they produce and is used in a variety of astronomical contexts. The wide binary
+ catalog contains several binaries containing two WDs. These are very
+ interesting sources for calibration since time since the formation of each WD
+ can be calculated from models and the ZAMS formation time of each WD progenitor
+ should be the same since they are in a binary system. This means we can solve
+ for the time from ZAMS formation to WD formation for each star.
  
+ This project will calculate the WD formation times for the double WD binaries
+ in the Gaia catalog and then compare those findings to stellar isochrones from
+ the \href{https://waps.cfa.harvard.edu/MIST/}{MESA Isochrones and Stellar
+ Tracks (MIST)} catalogs to obtain an \emph{empirical} initial to final mass
+ relation built by each of the WDs in the binary. You should then compare this
+ empirical initial to final mass relation to others reported in the literature.
+ How do they compare?
 
-\subsubsection{Testing Isochrone models}
+\subsection{Testing Stellar Age Measurements from Isochrones}
+Isochrones are built from theoretical models for stellar evolution and show
+snapshots of a single-age stellar population at different ages. This means that
+they are unlikely to produce age estimates which are $100\%$ accurate. This
+project will use binaries containing a white dwarf (WD) and a main sequence (MS)
+star. Since WDs have very clearly defined structure, you should first determine
+how long ago they formed based on their temperature and brightness by comparing
+to cooling models. You should then use the mass of the WD and compare to an
+initial to final mass relation to determine the ZAMS mass and total age of the
+binary system. You should then obtain the age of the (MS) by comparing it to
+isochrones which match the metallicity of the star. How does the age of the MS
+star compare to the age of obtained for the WD? Repeat this process for as many
+WD - MS binaries as you can to look for trends in the age measurements across MS
+mass and metallicity. 
+
+\section{Analyzing Periodic Signals with Lightkurve}
+Photometry is the easiest form of astronomical measurement. Time-resolved
+photometric data can be used to study populations of stars in great detail! In
+order to use photometric data, though, software tools are necessary for
+analysis. The following projects will use the Python package:
+\href{https://docs.lightkurve.org/index.html}{lightkurve} to carry out analysis
+of stars based solely on photometric time-series data. For each project, you
+should follow the tutorials which show how to access Kepler and TESS data and to
+produce observed light curves of each source you study. 
+
+\subsection{Measuring the Rotation Rates of Stars}
+This project will follow
+\href{https://docs.lightkurve.org/tutorials/index.html#rotation-rates-and-periodic-signals}{lightkurve
+tutorials} which show how to analyze photometric data to measure the rotation
+rates of stars and then subtract that rotation period out of the data. There
+will often be residual periodic signals; you should search for other sources of
+periodic signals beyond stellar rotation and be able to describe each of them. 
+
+Stellar rotation rates are also used to produce age estimates for stellar
+populations. You should search the literature to study how age estimates work in
+practice with stellar rotation.Once you finish the tutorials which give examples
+for a couple of stars, you should extend your skills to measure the rotation
+rates of other Kepler stars. 
 
 
-\subsection{Studying the Local Stellar Population}
+\subsection{Estimating Stellar Properties with Asteroseismology}
+This project will follow a
+\href{https://docs.lightkurve.org/tutorials/3-science-examples/asteroseismology-estimating-mass-and-radius.html}{lightkurve
+tutorial} which shows how to measure the mass and radius of a star through
+asteroseismic photometric measruements. Along with the tutorial, you should do
+research on asteroseismology to investigate how it is used to measure stellar
+properties that are difficult to obtain otherwise. The lightkurve tutorial uses
+a single star observed by Kepler, a space telescope designed to find exoplanets.
+Once you've completed the tutorial, you should expand your analysis to other
+stars observed by Kepler. By the end of this project you should be able to
+describe the key principles of asteroseismology, demonstrate its use for
+measuring stellar properties, and explain why it is not a tool that can be used
+for stars at all stages of their evolution.  
 
 
-\subsection{Using Stellar Isochrones to Measure the Age of a Star Cluster}
+\section{Measuring Star Cluster Ages}
+Star clusters are excellent tools for studying stellar populations because they
+contain stars that are all born with (roughly) the same age, composition, and
+distance. As a result, the brightness and temperature of the stars in a cluster
+can be used to provide an age estimate of the population if the stars in a given
+cluster are compared to a stellar isochrone. 
+
+For this project, you should pick a star cluster and obtain data for its
+constituent stars. Gaia is a good place to start looking for data! Once you have
+the data, you should make an absolute color-magnitude diagram of the population.
+You should then use the \href{https://waps.cfa.harvard.edu/MIST/}{MESA
+Isochrones and Stellar Tracks (MIST)} catalogs to calculate the age of the
+cluster. Based on the age of the cluster and the number of stars shining at
+present, how many stars do you expect to have already evolved through their
+lives to produce a stellar remnant? This project has tool overlap with the
+`Testing Stellar Models with Wide Binaries' projects so you should plan to share
+knowledge and expertise with your colleagues working on those projects. 
+
+\section{Designing Surveys for the Stars}
+Stellar evolution timescales rarely overlap with human timescales. This means
+that in order to test stellar evolution models, we need surveys that can observe
+stars and stellar populations across all phases of their lives. Unfortunately,
+funding for astronomy is limited and we must choose carefully which surveys we
+decide to support as a community.  
+
+For this project, you should explore different strategies for observing stars at
+evolutionary phases across the H-R Diagram. You should identify current surveys
+which are already planned or taking data now. Are there any phases of evolution
+that are not well covered by current or planned surveys? If you were given a
+free pass for one ground-based or space-based survey, how would you invest. You
+should be able to provide strong reasoning for your choice including why that
+investment would help other fields of astoronomy. 
 
 
-\subsection{Designing Surveys for the Stars}
+\section{Supernova Natal Kicks}
+Supernovae are some of the most energetic events in the Universe. Most
+supernovae occur at the end of a massive star's life once fusion in the core has
+ceased. For this project you should first search the literature to investigate
+different theoretical models for core-collapse and electron capture supernovae.
+How do these models influence the natal kicks imparted to the newly formed
+compact objects? A good starting place to search for models that are widely used
+in the literature is the documentation for the
+\href{https://cosmic-popsynth.github.io/}{COSMIC} population synthesis code
+which incorporates different assumptions for supernovae. 
 
+Next, you should investigate the literature for astronomical datasets that can
+be used to constrain natal kicks. Some starting ideas are neutron stars in
+supernova remnants or pulsars in globular clusters. Pick a dataset to focus on
+to try to determine whether the compact objects are likely to have received weak
+or strong natal kicks. You should be able to support your arguments with
+quantitative evidence that shows how supernova model assumptions compare to the
+data. 
 
-\subsection{The Stellar-Origin Black Hole Mass Function}
+\section{The Black Hole Mass Function}
 Black holes with masses below $\sim100\,M_{\odot}$ are predominantly expected to
 form from stars. This project will investigate how different assumptions for
 stellar evolution affects the masses of the black holes that can be produced
@@ -138,61 +226,6 @@ conclude about the origin of black holes based on this comparison? As detectors
 increase their sensitivity to stellar populations that are far away, do you
 expect the majority of the black holes to have larger masses or smaller masses?
 
-\section{Project List 2}
-\subsection{Orbital Evolution of Binaries in Roche-lobe Overflow}
-This project has both analytic and computational components. 
-
-\subsection{Finding black holes with Gaia}
-\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.1057E/abstract}{Gaia BH1 paper}
-
-
-
-\subsection{The Wild World of Binary-Star Evolution}
-These projects will use the population synthesis code
-\href{https://cosmic-popsynth.github.io/}{COSMIC} which simulates single and
-binary-star populations at phases across the H-R Diagram through to the
-formation of stellar remnants. There are \emph{many} different uncertainties
-associated with binary evolution due to different interactions between binary
-components that can occur based on the initial properties of the system and
-assumptions made for how each interaction should be treated. This means that
-there are \emph{a lot} of opportunities for exploration. You should explore the
-COSMIC documentation and \href{}{COSMIC code paper} for a summary of the
-different assumptions made in the code as well as the
-\href{https://www.astro.ru.nl/~sluys/Binaries/files/BinaryEvolutionNutshell_letter.pdf}{Binary
-Evolution in a Nutshell} notes to find an aspect of binary star interactions
-that you find most interesting. Maybe it's studying how different assumptions
-for wind mass loss affects binary populations? Maybe it's investigating how
-compact object populations depend on the strength of supernova natal kicks?
-Maybe it's something else!
-
-Whatever topic you choose should not be exactly the same as any other projects,
-so you may need to coordinate with your colleagues. Once you have a topic to
-study, you should determine which assumptions are set by flags in COSMIC that
-affect that topic as well as determine which binary populations will show the
-largest changes by using different assumptions. You should then summarize how
-you expect each assumption you make to alter the binary population from its
-initial configuration at ZAMS. Finally, you should evolve large populations of
-binaries with COSMIC using the flags you've chosen and make figures which
-illustrate how each assumption impacts the population. 
-
-
-\subsection{Investigating Dark Matter with Stellar Streams}
-
-
-\subsection{The Fastest Stars in the Galaxy}
-
-
-\subsection{Connecting Dust Morphology to Star Formation}
-
-
-\subsection{Kinematics of Compact Objects in the Galaxy}
-
-
-\subsection{Chemical Evolution with the Cannon}
-
-
-
-\subsection{Exoplanet Orbital Dynamics with Rebound}
 
 
 \end{document}
