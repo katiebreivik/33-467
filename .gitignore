@@ -1,3 +1,5 @@
+.DS_store
+
 ## Also ignore the sandbox data
 projects/sandbox/*
 
