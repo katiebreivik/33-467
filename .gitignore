@@ -1,3 +1,6 @@
+## Also ignore the sandbox data
+projects/sandbox/*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
