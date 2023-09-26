@@ -1,0 +1,99 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Assignment \#3}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\bluetext{\texttt{#1}}}
+
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{../includes/teacher-info}                              %|
+\input{../includes/course-info} 
+\input{../includes/packages-imports}                          %|  
+\input{../includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{../includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+\normalfont
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{../includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Problem # 1                                              |
+%------>------>------>------>------>------>------>------>--> |
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1: The $\rho$ - $T$ plane (22 points)}}\\
+
+\noindent \textbf{Problem \#1a: Setting boundaries (10 points)}\\
+Consider a gas of ionized hydrogen. Using the relations we derived in class find
+the boundary in the $\rho$ - $T$ plane where:
+\vspace{4pt}
+
+\noindent ($i$) radiation pressure dominates the equation of state of the gas (5 points)
+\vspace{4pt}
+
+\noindent ($ii$) the ideal gas pressure dominates the equation of state of the
+gas (5 points)\\
+
+\noindent \textbf{Problem \#1b: Big stars and little stars (12 points)}\\
+
+\noindent ($i$) Using the mass - radius relation calculate the average density
+of a $10\,\rm{M_{\odot}}$ and $150\,\rm{M_{\odot}}$ star on the main sequence. (4 points)
+\vspace{4pt}
+
+\noindent ($ii$) Using the virial theorem as described in chapter two to
+calculate the average temperature of the $10\,\rm{M_{\odot}}$ and
+$150\,\rm{M_{\odot}}$ stars. (4 points)
+\vspace{4pt}
+
+\noindent ($iii$) Does radiation pressure or ideal gass pressure dominate for
+each star based on their average densities and temperatures? (4 points)
+
+\vspace{10pt}
+\noindent \dunderline{1.0pt}{\textbf{Problem \#2: Writing an abstract from
+preliminary work (20 points)}}\\
+\noindent Working as a researcher, you'll encounter situations where you need to
+write an abstract for a presentation on a research project that isn't finished
+yet. This can be kind of a scary thing to do if you aren't quite sure what you
+might actually end up finding; but... deadlines are deadlines! \\
+
+\noindent For this problem, you should try to formulate as clear of an abstract
+as you can based on your current progress in project 1. It is OK if you don't
+have results yet! But hopefully you have a rough idea of what you hope to
+accomplish and you can articulate why you think the topic is interesting. Every
+good abstract starts with some context about your problem, then gives some
+details for your methods, then hints that there could be interesting results.
+The average length is between 5 and 7 sentences (ish), so this shouldn't take
+you too long to write! \\
+
+\noindent \emph{\large Hint!} If you need some inspiration, take a look at the
+abstracts of the papers you searched for on ads in homework 2.
+
+\end{document} 
