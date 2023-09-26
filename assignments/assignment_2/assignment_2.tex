@@ -1,0 +1,183 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Assignment \#2}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\bluetext{\texttt{#1}}}
+
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{../includes/teacher-info}                              %|
+\input{../includes/course-info} 
+\input{../includes/packages-imports}                          %|  
+\input{../includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{../includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+\normalfont
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{../includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Problem # 1                                              |
+%------>------>------>------>------>------>------>------>--> |
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1: Stellar timescales (Based on
+ Pols notes 2.5)}}\\
+\noindent By the end of this problem, you should have a solid understanding of
+ the different timescales of how stars respond due to changes of their
+ hydrostatic or thermal equilibrium as well as due to nuclear burning in their
+ centers.
+
+ \vspace{4pt}
+ \noindent \textbf{Problem \#1a: The nuclear timescale ($\tau_{\rm{nuc}}$)}
+ 
+ \vspace{4pt}
+ \noindent ($i$) Calculate the total mass of hydrogen available for fusion over
+ the lifetime of the Sun, if $70\%$ of its mass was hydrogen when the Sun was
+ formed, and only $13\%$ of all hydrogen is in the layers where the temperature
+ is high enough for fusion.
+
+ \vspace{8pt}
+
+ \noindent ($ii$) Derive an expression for the nuclear timescale in solar units,
+ i.e. expressed in terms of $(R/R_{\odot}$), $(M/M_{\odot}$), and
+ $(L/L_{\odot}$).
+
+ \vspace{8pt}
+ \noindent ($iii$) Use the mass-radius and mass-luminosity relations for
+ main-sequence stars to express the nuclear timescale of main-sequence stars as
+ a function of the mass of the star only.
+
+ \vspace{8pt}
+ \noindent ($iv$) Describe the meaning of the nuclear timescale in your own
+ words. 
+
+ \vspace{10pt}
+ \noindent \textbf{Problem \#1b: The thermal timescale ($\tau_{\rm{therm}}$)}
+
+ \vspace{4pt}
+ \noindent ($i$) Derive an expression for the thermal timescale in solar units,
+ i.e. expressed in terms of $(R/R_{\odot}$), $(M/M_{\odot}$), and
+ $(L/L_{\odot}$).
+
+ \vspace{8pt}
+ \noindent ($ii$) Use the mass-radius and mass-luminosity relations for
+ main-sequence stars to express the thermal timescale of main-sequence stars as
+ a function of the mass of the star only.
+
+ \vspace{8pt}
+ \noindent ($iii$) Describe the meaning of the thermal timescale in your own
+ words. 
+
+ \vspace{10pt}
+ \noindent \textbf{Problem \#1c: The dynamical timescale ($\tau_{\rm{dyn}}$)}
+
+ \vspace{4pt}
+ \noindent ($i$) Derive an expression for the dynamical timescale in solar
+ units, i.e. expressed in terms of $(R/R_{\odot}$), $(M/M_{\odot}$), and
+ $(L/L_{\odot}$).
+
+ \vspace{8pt}
+ \noindent ($ii$) Use the mass-radius and mass-luminosity relations for
+ main-sequence stars to express the dynamical timescale of main-sequence stars
+ as a function of the mass of the star only.
+
+ \vspace{4pt}
+ \noindent ($iii$) Describe the meaning of the dynamical timescale in your own
+ words. 
+
+
+ \vspace{10pt}
+ \noindent \textbf{Problem \#1d: Comparing the timescales}
+
+ \vspace{4pt}
+ \noindent ($i$) Summarize your results for the questions above by computing the
+ nuclear, thermal and dynamical timescales for a $1$, $10$ and $25\,M_{\odot}$
+ main-sequence star.
+
+ \vspace{4pt}
+ \noindent ($ii$) When the Sun becomes a red giant, its radius will increase to
+ $200\,R_{\odot}$ and its luminosity to $3000\,L_{\odot}$. Estimate
+ $\tau_{\rm{dyn}}$ and $\tau_{\rm{therm}}$ for such a red giant.
+
+
+ \vspace{4pt}
+ \noindent ($iii$) How large would such a RG have to become for $\tau_{\rm{dyn}}
+ > \tau_{\rm{therm}}$? Assume both R and L increase at constant effective
+ temperature.
+
+
+\newpage
+ \noindent \dunderline{1.0pt}{\textbf{Problem \#2: Accessing scientific
+ manuscripts as part of astronomy research}}
+
+ \vspace{4pt}
+ \noindent The astrophysics data system
+ (\href{https://ui.adsabs.harvard.edu/}{ads}) hosted by the Smithsonian
+ Astrophysical Observatory is the central hub of all science manuscripts in
+ astronomy. As part of Project 1, you'll likely need to do some searching to
+ find science papers that are relevant to your topic. This problem is designed
+ to help you get acquainted with ads and to begin your search through the
+ astronomical literature!
+
+ \vspace{10pt}
+ \noindent \textbf{Problem \#2a: The ads search form}\\
+ \noindent The ads search form contains several examples for searching the
+ literature, including a full text search. The full text search can be very
+ powerful but only if you wield it smartly. Decide on a search term that
+ pertains to your project, report it as an answer, then also report the number
+ of manuscripts that are returned in your search. How useful is this set of
+ literature in bulk?
+
+ \vspace{10pt}
+ \noindent \textbf{Problem \#2b: Narrowing down a search}\\
+ \noindent Often times, the literature is \emph{too much} to sort through. In
+ this case, you need to use more specific searches to narrow down the results.
+ Based on the available search terms, choose two additional ways to narrow down
+ your search. Report those below and also report the number of manuscripts
+ returned by the search with each additional narrowed down search. Describe in
+ words why you chose the search terms you chose. 
+
+ \vspace{10pt}
+ \noindent \textbf{Problem \#2c: Selecting papers to read}\\
+ \noindent Even with a more manageable set of papers, it can be difficult to
+ choose which papers to start reading. One option is to read the abstracts of
+ the papers returned starting from the most recent until you find a paper that
+ seems relevant. Alternatively, you can start from the oldest paper and read
+ abstracts until you find a paper that seems relevant. Try out both of the
+ options and pick one paper from each option. Which was the easiest option for
+ selection? Why? (Note there isn't a right answer but you should be able to
+ articulate which one you prefer since it will help you in future literature
+ searches!) 
+
+
+
+\end{document} 
