@@ -30,25 +30,41 @@
 \makeatother
 \end{tcolorbox}
 
-\section{Orbital Evolution of Binaries in Roche-lobe Overflow}
-This project has both analytic and computational components. 
+\section{Binary evolution with COSMIC}
 
-\section{Finding black holes with Gaia}
-\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.1057E/abstract}{Gaia BH1 paper}
+\subsection{Orbital Evolution of Binaries in Roche-lobe Overflow}
+This project has both analytic and computational components. In class, we will
+cover how a binary star's orbit responds to mass exchange through Roche-lobe
+overflow from one star to its companion. Your first task is to reproduce the
+derivation under the assumption that the mass transfer is fully conservative. In
+the Universe, though, it is not required that mass transfer remain fully
+conservative. In fact, the amount of mass a star can accrete through Roche-lobe
+overflow is an open research question! 
 
+Since we don't know the answer for how conservative mass transfer can be, we
+parameterize this uncertainty and calculate how different assumptions for how
+much mass is accreted affect the future evolution of the binary. You should
+introduce a tuning parameter (often called $\beta$) that represents how much
+mass is accreted. Before running any code, write down some predictions for how
+different values for the accretion fraction will alter the future evolution of a
+binary. Once you have your predictions, install COSMIC and explore the
+\href{https://cosmic-popsynth.github.io/COSMIC/}{COSMIC documentation} and
+\href{https://ui.adsabs.harvard.edu/abs/2020ApJ...898...71B/abstract}{COSMIC
+code paper}. Next, initialize a binary that will undergo stable mass transfer
+through Roche-lobe overflow (this will require some guess and check). Using
+different assumptions for the accretion fraction (`f\_acc'), determine whether
+your predictions were correct. 
 
-
-\section{The Wild World of Binary-Star Evolution}
-These projects will use the population synthesis code
-\href{https://cosmic-popsynth.github.io/}{COSMIC} which simulates single and
-binary-star populations at phases across the H-R Diagram through to the
-formation of stellar remnants. There are \emph{many} different uncertainties
-associated with binary evolution due to different interactions between binary
-components that can occur based on the initial properties of the system and
-assumptions made for how each interaction should be treated. This means that
-there are \emph{a lot} of opportunities for exploration. You should explore the
-COSMIC documentation and \href{}{COSMIC code paper} for a summary of the
-different assumptions made in the code as well as the
+\subsection{The Wild World of Binary-Star Evolution}
+There are \emph{many} different uncertainties associated with binary evolution
+due to different interactions between binary components that can occur based on
+the initial properties of the system and assumptions made for how each
+interaction should be treated. This means that there are \emph{a lot} of
+opportunities for exploration. You should explore the
+\href{https://cosmic-popsynth.github.io/COSMIC/}{COSMIC documentation} and
+\href{https://ui.adsabs.harvard.edu/abs/2020ApJ...898...71B/abstract}{COSMIC
+code paper} for a summary of the different assumptions made in the code as well
+as the
 \href{https://www.astro.ru.nl/~sluys/Binaries/files/BinaryEvolutionNutshell_letter.pdf}{Binary
 Evolution in a Nutshell} notes to find an aspect of binary star interactions
 that you find most interesting. Maybe it's studying how different assumptions
@@ -67,22 +83,134 @@ binaries with COSMIC using the flags you've chosen and make figures which
 illustrate how each assumption impacts the population. 
 
 
-\section{Investigating Dark Matter with Stellar Streams}
+\section{Finding Dark Matter with Stellar Streams}
+One proposed form of dark matter is the $\Lambda$ Cold Dark Matter
+($\Lambda$CDM) model which is expected to result in small-scale dark matter
+halos orbiting along with stars in galaxies. Stellar streams, made up of tidally
+disrupted globular clusters and dwarf galaxies, are \emph{amazing} tracers of
+small-scale gravitational overdensities like dark matter clumps.
+
+In this project, you will follow along with a
+\href{https://datacarpentry.org/astronomy-python/}{Data Carpentry Tutorial} to
+reporduce the results of
+\href{https://ui.adsabs.harvard.edu/abs/2018ApJ...863L..20P/abstract}{Price-Whelan
+et al. 2019} which shows that stars in the stellar stream Gaia GD-1 may have
+been perturbed due to a dark matter clump. This project will involve building
+skills in astroquery, joining different data sets, and selecting regions of
+interest in a dataset. By the end of the project, you should have figures which
+show the Gaia GD-1 stream and illustrate why the authors argue that the stream
+has been perturbed by a small-scale dense object that could be a dark matter
+subhalo. As part of this project, you should also summarize what stellar streams
+are, what the $\Lambda$CDM model predicts and why it is favored by the
+scientific community, and how future observations could aid in discoveries of
+dark matter clumps.
+
+
+
+\section{Black hole kicks with Gaia BH1 and Gaia BH2}
+The recent discoveries of
+\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.1057E/abstract}{Gaia BH1}
+and \href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.521.4323E/abstract}{Gaia
+BH2} were some of the most exciting discoveries in 2023 (at least according to
+Prof. Breivik). Since there is no accretion in either binary, the last thing to
+alter the orbit of the binary and its trajectory in the Galaxy was the natal
+kick that may or may not have been imparted during the formation of each black
+hole. This means that the current orbit of each binary in the Galaxy places a
+pretty strong constraint on the black hole kicks!
+
+For this project, you should gather the observed properties of each binary from
+their respective papers. You should then download and install
+\href{https://cosmic-popsynth.github.io}{COSMIC} and check out the
+documentation. In particular, you should find the section that shows how to
+restart a binary and gives a specific example for Gaia BH1. Once you are able to
+produce a population of black hole binaries, you shoud explore the degeneracies
+between the pre-explosion separation, the strength and direction of the black
+hole natal kick, and the final orbital period and eccentricity. Finally, you
+should repeat the excersize with Gaia BH2's parameters. Do Gaia BH1 and Gaia BH2
+have similar kick strengths?
 
 
 \section{The Fastest Stars in the Galaxy}
+Type Ia supernovae are extremely important in both astronomy and cosmology
+because they are \emph{standardizable} candles. This means that with some
+calibration, their brightness can be used to infer their brightness. This
+technique was famously applied to measure the expansion of the Universe which
+was found to be accelerating rather than just expanding. This finding led to
+Saul Perlmutter, Brian Schmidt, and Adam Riess being awarded the Nobel Prize in
+2011. 
 
+Today, one of the main concerns about Type Ia supernovae is whether they are
+caused from the mergers of two white dwarfs (double degenerate) or due to
+accretion onto a white dwarf (single degenerate) or some combination of both!
+One of the favored channels is the D6 scenario whose name is based on the
+dynamically-driven double detonation of double degenerate (6 d's!) binaries. For
+this project, you should first do a literature search to understand what the D6
+scenario is and what observable signatures a D6 source would lead to.
+\href{https://ui.adsabs.harvard.edu/abs/2018ApJ...865...15S/abstract}{Shen+2019}
+is a good starting place, but there are lots of good references in Section 2 of
+the paper. Once you have a handle on D6, use Gaia DR3 to find D6 candidates
+based on the observable signatures of the channel. By the end of this project,
+you should have a list of candidates and be able to argue why you think they are
+or are not originating from the D6 channel. 
 
-\section{Connecting Dust Morphology to Star Formation}
+\section{Gravitational Wave Data Analysis}
+The discovery of Gravitational Waves by the LIGO-Virgo Collaboration in 2015
+marked a feat of science nearly 100 years in the making following their
+prediction by Einstein's theory of General Relativity. The detection of two
+merging black holes that were more than a billion light years away led to the
+2016 Nobel Prize being awarded to Rai Weiss, Kip Thorne, and Barry Barish. The
+work was carried out by \emph{over a thousand} people though -- the detection
+was a physics experiemnt in and of itself!
 
+Luckily for us, the LIGO Science Collaboration has produced tutorials for
+interested folks to download and play with their data so that you can learn
+exactly how gravitational wave data analysis works. For this project, you should
+work through the "Guide to GW detections and noise" tutorial on the
+\href{https://gwosc.org/tutorials/}{GW open science center website.}  Once
+you've finished that tutorial, you can move onto the "Searching for
+astrophysical sources" section to find an insprialing source. By the end of the
+project, you should have a lot of figures and be able to describe how each
+analysis step works.
 
-\section{Kinematics of Compact Objects in the Galaxy}
+\section{How old are those stars ... dynamically speaking?}
+It is often \emph{very} hard to tell whether a star is very old based on
+photometry alone since main sequence lifetimes for your average star are several
+billion years. One way that we can measure the age is through kinematics because
+old, low-metallicity stars are empirically known to orbit the Galaxy at larger
+vertical distances from the center of the disk than younger, higher-metallicity
+stars. In this project, you will explore how well kinematic ages approximate the
+true age and metallicity of stars.  
 
-
-\section{Chemical Evolution with the Cannon}
-
+First, you should download
+\href{https://gala.adrian.pw/en/latest/index.html}{Gala} and work through the
+tutorial which shows how to ingegrate orbits of stars observed by Gaia. Once you
+have worked through the tutorial, you should gather a set of stars with known
+metallicities and integrate their orbits. Do the orbits look like you'd expect
+based on the metallicity? If not, what are some reasons that there could be
+discrepancies. Based on the current position of the stars, is it safe to only
+use the position as an age indicator? How much information does the addition of
+the proper motion add?
 
 
 \section{Exoplanet Orbital Dynamics with Rebound}
+The discovery of over 5,000 exoplanets has made it clear that our own solar
+system is not the only configuration for which planets can orbit stars on
+long-term stable orbits. One of the biggest surprises of the 2010's was that
+Jupiter-mass planets were found to orbit their host stars closer than Mercury
+orbits in our own solar system. These planets were named "Hot Jupiters" due to
+their proximity to their host star and were subsequently the subject of many
+theoretical papers which tried to determine whether these planets could have
+been scattered through gravitational interactions with other planets, slowly
+migrated inward over time, or just been born there in the first place. 
+
+For this project you should first do a literature search in ADS to trace the
+reasoning for different theories and the evidence that backs each of them. You
+should then download \href{https://rebound.readthedocs.io/en/latest/}{REBOUND},
+an open-source code that you can use with Python or C and calculates the
+evolution of gravitationally bound systems extremely acurately. There are
+several examples for how REBOUND works for planet-star systems which you should
+work through. After this, you should modify the examples to try to understand
+how different assumptions for Hot Jupiter formation play out when integrating
+different initial configurations of exoplanet systems. 
 
 \end{document}

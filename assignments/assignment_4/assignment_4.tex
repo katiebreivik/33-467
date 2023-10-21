@@ -1,0 +1,121 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Assignment \#4}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\bluetext{\texttt{#1}}}
+
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{../includes/teacher-info}                              %|
+\input{../includes/course-info} 
+\input{../includes/packages-imports}                          %|  
+\input{../includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{../includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+\normalfont
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{../includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Problem # 1                                              |
+%------>------>------>------>------>------>------>------>--> |
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1: Radiation Transport (18 points)}}\\
+The most important form of energy transport for stars on the main sequence
+(which is $90\%$ of the stellar lifetime), is radiation transport.
+\vspace{8pt}
+
+\noindent \textbf{Problem \#1a: How old are those photons? (8 points)}\\
+Even though we don't always get to see them through Pittsburgh's clouds, photons
+are leaving the surface of the Sun all the time. Estimate the minimum time it
+takes a photon to travel from the core of the Sun to the surface, assuming that
+the photon retains it's identity every time it is absorbed and re-emmited. This
+is probably not realistic, but I haven't yet had the opportunity to ask a photon
+if it remembers all the places it has been absorbed and emitted.
+\vspace{4pt}
+
+\noindent ($i$) First, calculate the mean free path of a photon in the interior
+regions of the Sun noting that the minimum opacity of fully ionized hydrogen is
+set by the electron scattering cross section to be
+$\kappa_{\rm{es}}=0.4\,\rm{cm^2/g}$. \emph{Hint:} You can use the average
+density that you calculated in Homework 3 for a $1\,\rm{M_{\odot}}$ star. (2
+points)
+\vspace{4pt}
+
+\noindent ($ii$) Next, using the speed of the photon, the mean free path, and
+the radius of the sun, derive an equation for the time it takes for the photon
+to travel from the center of the sun to its surface. I think the easiest way to
+do this is using the dimensions of each variable, but you might think a
+different way is easiest! (4 points)
+\vspace{4pt}
+
+\noindent ($iii$) How does your result compare to the thermal timescale of the
+Sun? (2 points)
+\vspace{8pt}
+
+\noindent \textbf{Problem \#1b: Conceptual stuff (4 points)}\\
+\vspace{2pt} 
+Why does the diffusion approximation for radiation transport break down near the
+surface of a star? Supply your answer in full at least one full sentence. 
+
+\vspace{8pt}
+\noindent \textbf{Problem \#1c: How small is a `small' temperature gradient? (6
+points)}\\
+Estimate the temperature gradient, $\partial T/\partial r$, in a gas blob inside
+of the Sun where $T\sim10^7\,\rm{K}$, $r \sim 0.2\,\rm{R_{\odot}}$, $l(r) \sim
+3.8\times10^{33}\,\rm{erg/s}$, $\kappa_{\rm{es}}\sim 0.4\,\rm{cm^2/g}$. What is
+the change in the temperature over the range of a single mean free path of a
+photon?
+
+\vspace{10pt}
+\noindent \dunderline{1.0pt}{\textbf{Problem \#2: Figures and captions (20
+points)}}\\
+\noindent Your project presentations are coming up soon! As part of your
+presentation, you should plan to include at least one original figure that you
+(and your partner if you have one) make. In the presentation, you'll be able to
+walk the audience through the figure. This isn't the only way that figures are
+presented though!\\
+
+\noindent For this problem, you should create a figure (you and your partner can
+submit the same figure) that you could use in your presentation. The figure
+should illustrate some conclusion or result from your project and should have
+adequate axis labels and a legend if necessary. Once you have a figure, you
+should also write a figure caption that describes the necessary information for
+a reader to understand and interpret the figure themselves. It's also a good
+idea to add in a punchline that you want your reader to take away from the
+figure. \emph{You must write your own figure caption even if you and your
+partner share the figure.}\\
+
+\noindent \emph{\large Hint!} If you need some inspiration, take a look at the
+some figures in the papers you searched for on ads in homework 2.
+
+\end{document} 
