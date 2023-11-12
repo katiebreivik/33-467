@@ -1,0 +1,90 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Assignment \#5}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\bluetext{\texttt{#1}}}
+
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{../includes/teacher-info}                              %|
+\input{../includes/course-info} 
+\input{../includes/packages-imports}                          %|  
+\input{../includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{../includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+\normalfont
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{../includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Problem # 1                                              |
+%------>------>------>------>------>------>------>------>--> |
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1: Stellar Evolution (26
+points)}}\\
+We have officially covered all the top level things necessary to understand the
+general principles of stellar evolution! This problem asks you to prove it.
+\vspace{8pt}
+
+\noindent \textbf{Problem \#1a: Accessing and plotting stellar models (10
+pts)}\\
+\noindent Since we don't have access to a supercomputer that can help us run many stellar
+evolution models, we'll be using the MESA Isochrones and Stellar Tracks (MIST)
+packaged grids. Your first task is to download the thoeretica evolutionary
+tracks from the
+\href{https://waps.cfa.harvard.edu/MIST/model_grids.html#eeps}{MIST website} for
+nonrotating stars at solar metallicty ([Fe/H] = 0.0). 
+\vspace{4pt}
+\noindent Once you have the models, plot the evolution in the theoretical H-R Diagram of a
+$1\,\rm{M}_{\odot}$, $5\,\rm{M}_{\odot}$, $10\,\rm{M}_{\odot}$, and
+$20\,\rm{M}_{\odot}$ star on five separate figures. Be sure to label your axes
+and make sure that hotter temperatures start at the left of the x-axis!
+\vspace{8pt}
+
+\noindent \textbf{Problem \#1b: Accessing and plotting stellar models (16
+pts)}\\
+\noindent For each star, label (either with text in the plotting software or by hand) the
+critical phases of evolution that are included in each evolutionary track. You
+should explain the reasoning for every slope and direction change that the star
+makes as it evolves across the H-R Diagram for each of the stars you have
+plotted. 
+
+
+\vspace{10pt}
+\noindent \dunderline{1.0pt}{\textbf{Problem \#2: Self Reflections in
+Research (9 pts)}}\\
+Now that you have some distance from your project 1 presentations, it's time to
+reflect. Write down three things that worked well in your project and three
+things that didn't. For each of the three things that didn't work, write down a
+strategy for how you can mitigate running into those problems for project 2.
+
+\end{document} 
