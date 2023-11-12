@@ -1,0 +1,153 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Assignment \#6}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\bluetext{\texttt{#1}}}
+
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{../includes/teacher-info}                              %|
+\input{../includes/course-info} 
+\input{../includes/packages-imports}                          %|  
+\input{../includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{../includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+\normalfont
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{../includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Problem # 1                                              |
+%------>------>------>------>------>------>------>------>--> |
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1: Binary Evolution (36
+points)}}\\
+We have officially covered all the top level things necessary to understand the
+general principles of binary evolution! This problem asks you to prove it.
+\vspace{8pt}
+
+\noindent \textbf{Problem \#1a: Install and run COSMIC (12 pts)}\\
+\noindent COSMIC is a binary population synthesis code that can evolve binary
+stars from ZAMS up to the formation and merger of the stellar remnants in the
+binary. The first part of this problem is to install and import COSMIC into a
+jupyter notebook. Since COSMIC only builds for linux and mac os, if you have a
+windows machine, you should use Google Colab (which runs linux). You can follow
+the installation instructions in the
+\href{https://cosmic-popsynth.github.io/COSMIC/install/index.html}{COSMIC
+documentation}
+\vspace{4pt}
+
+\noindent Once you have COSMIC installed, run the
+\href{https://cosmic-popsynth.github.io/COSMIC/examples/index.html}{first
+example} in the documentation which evolves a massive binary star that produces
+black holes which kind of match the mass of GW150914. To prove that you have run
+the code, print the 'tphys', 'mass\_1', 'mass\_2', 'kstar\_1', 'kstar\_2',
+'porb', 'ecc', and 'evol\_type' columns from the bpp DataFrame. You can use the
+`utils.convert\_kstar\_evol\_type' function in COSMIC by first importing utils,
+then calling the function with your bpp DataFrame as an argument as shown in the
+documentation. You can also read about the kstar and evol\_type keys in the
+\href{https://cosmic-popsynth.github.io/COSMIC/output_info/index.html}{COSMIC
+documentation}.
+
+\vspace{4pt} 
+
+\noindent Describe the evolution of the binary in words. Is the Roche lobe of
+either component in the binary filled? If so, how does the Roche overflow affect
+the orbit? What about the masses of each component in the binary? How does the
+formation of each black hole alter the orbit?
+\vspace{8pt}
+
+\noindent \textbf{Problem \#1b: Low mass binary evolution (12 pts)}\\
+\noindent Evolve a ZAMS binary with the following parameters:\newline
+$mass\_1=6.0\,\rm{M_{\odot}}$, $mass\_2=1.5\,\rm{M_{\odot}}$,
+$porb=600\,\rm{days}$, $ecc=0$, $Z=0.014$\newline
+In the `Evolve.evolve' function call, supply the keyword argument: `dtp=0.0'.
+This will tell COSMIC to keep all timesteps for the binary in the `bcm'
+DataFrame. 
+
+\vspace{4pt}
+\noindent Once the binary is evolved, print the bpp DataFrame with the same
+columns as in Problem 1a. Next, make a figure of the orbital period vs time and
+a second figure of the two component masses vs time. Be sure to label each axis,
+and include a legend for the mass figure. If most of the evolution occurs at
+certain times, you should trim the x limits of your figure.  
+
+\vspace{4pt}
+\noindent Similar to Problem 1a, describe the evolution of the binary in words
+taking care to describe the reason for all the different features in each of
+your figures. 
+
+\vspace{10pt}
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1c: High mass binary evolution
+(12 pts)}}\\
+\noindent Since natal kicks are implemented as a stochastic (random) process, if
+you want to reproduce the exact evolution of a binary, you'll need to supply a
+random seed to numpy. For this problem, you should seed numpy's random number
+generator with 5. Once the seed is set, evolve a ZAMS binary with the following
+parameters:\newline
+$mass\_1=50.0\,\rm{M_{\odot}}$, $mass\_2=35.0\,\rm{M_{\odot}}$,
+$porb=120\,\rm{days}$, $ecc=0$, $Z=0.014$\newline
+In the `Evolve.evolve' function call, supply the keyword argument: `dtp=0.0'. As
+before, this will tell COSMIC to keep all timesteps for the binary in the `bcm'
+DataFrame. 
+
+\vspace{4pt}
+\noindent Once the binary is evolved, print the bpp DataFrame with the same
+columns as in Problem 1a. Next, make a figure of the orbital period vs time and
+a second figure of the two component masses vs time. Be sure to label each axis,
+and include a legend for the mass figure. If most of the evolution occurs at
+certain times, you should trim the x limits of your figure.  
+
+\vspace{4pt}
+\noindent Similar to Problem 1a, describe the evolution of the binary in words
+taking care to describe the reason for all the different features in each of
+your figures. What is the main outcome difference from this binary and the
+binary in problem 1a?
+
+\vspace{20pt}
+
+\noindent \dunderline{1.0pt}{\textbf{Problem \#2: Gravitational wave analysis (6
+points)}}\\
+The year is 2038. Prof. Breivik is as hype as she's ever been because the first
+data from LISA has been released. One signal has been measured to have a
+dimensionless strain value of $h=1.8\times10^{-22}$, a gravitational-wave
+frequency of $f_{\rm{GW}}=2.75\,\rm{mHz}$ and a gravitational-wave frequency
+evolution of $\dot{f}_{\rm{GW}}=1.1 \times 10^{-16}\rm{Hz/s}$. 
+
+\vspace{4pt}
+\noindent Based on these measured quantities, solve for the chirp mass,
+$\mathcal{M}_c$, and distance, $D$ to this new source. What type of source do
+you expect is producing this gravitational-wave signal based on it's chirp mass?
+
+
+
+\end{document} 
