@@ -1,0 +1,110 @@
+% !TeX encoding = UTF-8 !TeX spellcheck = en_US
+\documentclass[11pt, a4paper]{article}
+
+% The title of the current document to be produced.
+\newcommand{\doctitle}{Assignment \#7}
+\newcommand{\assignments}{\bluetext{\textbf{Assignment:}}}
+%
+\setlength{\unitlength}{1in}
+\renewcommand{\arraystretch}{2}
+\setlength{\columnsep}{2cm}
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+\usepackage[sfdefault]{atkinson}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\bluetext{\texttt{#1}}}
+
+
+%------------------------------------------------------------
+% Import commands for both teacher and course information.  | NOTE: Change your
+% teacher and course info in these files. |
+%------>------>------>------>------>------>------>------>-->|
+%
+%------------------------------------------------------------
+%-- Import packages and custom command definitons.          |
+%------>------>------>------>------>------>------>------>-->|
+\input{../includes/teacher-info}                              %|
+\input{../includes/course-info} 
+\input{../includes/packages-imports}                          %|  
+\input{../includes/custom-commands}   
+%
+%---> Genereate & inject metadata                           |
+\input{../includes/hyperef.doc.info}                          %|
+%------------------------------------------------------------
+
+\topmargin -70pt
+\begin{document} 
+
+\normalfont
+
+%-------------------------------------------------------------
+%-- Make the header of the document                          |
+%------>------>------>------>------>------>------>------>--> |
+\input{../includes/document-header}
+  
+%-------------------------------------------------------------
+%-- Problem # 1                                              |
+%------>------>------>------>------>------>------>------>--> |
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1a: Accessing public exopolanet
+data (5 pts)}}\\
+The largest catalog of exoplanets can be found in the
+\href{https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars}{Composite
+Data Table} of the NASA Exoplanet Archive. Download the data table by clicking
+on the "Download" button, and save to a datafile that you can open locally on
+your computer/laptop. To verify that you have accessed the data, plot a
+histogram of the log-base-10 of the orbital period of each exoplanet. Be sure to
+label your axes!
+
+\vspace{4pt}
+\noindent\emph{Hint:} there are several header columns in the data file that
+will be dowloaded. These headers show you the names of the columns (including
+the name of the orbital period column).
+
+\vspace{4pt}
+\noindent\emph{Hint 2:} Pandas makes loading data easy. You can specify the
+number of header lines to skip using `skiprows=number\_to\_skip' in the function
+call that loads the data. If you skip the right number of rows, you can use the
+row just before the data stars to specify the columns automatically!
+
+\vspace{8pt}
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1b: Multiplanet systems (10
+pts)}}\\
+Now that you have data loaded, you should use the column which specifies the
+number of planets per system to plot histograms for subsets of the data
+containing 1, 2, 3, 4, and 5 planets per system on the same figure. Be sure to
+include a legend so that you can see how the orbital period distributions
+change.
+
+\vspace{8pt}
+\noindent \dunderline{1.0pt}{\textbf{Problem \#1c: Biases in observing
+multiplanet systems (9 pts)}}\\
+Based on your figure and the material in the class lectures, provide two
+examples of how observational biases could affect the size and
+orbital period distribution of planetary systems. Provide one argument, based on
+exoplanet dynamics, for why there could truly be fewer multiplanet systems.
+
+\vspace{20pt}
+
+\noindent \dunderline{1.0pt}{\textbf{Problem \#2: Figures and captions (again!)
+(20 points)}}\\
+\noindent Your project presentations are coming up soon! As part of your
+presentation, you should plan to include at least one original figure that you
+(and your partner if you have one) make. In the presentation, you'll be able to
+walk the audience through the figure. This isn't the only way that figures are
+presented though!\\
+
+\noindent For this problem, you should create a figure (you and your partner can
+submit the same figure) that you could use in your presentation. The figure
+should illustrate some conclusion or result from your project and should have
+adequate axis labels and a legend if necessary. Once you have a figure, you
+should also write a figure caption that describes the necessary information for
+a reader to understand and interpret the figure themselves. It's also a good
+idea to add in a punchline that you want your reader to take away from the
+figure. \emph{You must write your own figure caption even if you and your
+partner share the figure.}\\
+
+\end{document} 
